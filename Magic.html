@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic Number</title>
+  </head>
+  <body>
+    <script>
+      let no = 17529;
+      let original = no;
+
+      document.write("Number = " + original);
+
+      let sum = 0;
+
+      while (no > 0) {
+        let r = no % 10;
+        sum = sum + r;
+        no = Math.floor(no / 10);
+      }
+
+      document.write("<br>Sum of digits = " + sum);
+
+      let rev = 0;
+      let s = sum;
+
+      while (sum > 0) {
+        let r = sum % 10;
+        rev = rev * 10 + r;
+        sum = Math.floor(sum / 10);
+      }
+
+      document.write("<br>Reverse = " + rev);
+
+      let m = s * rev;
+
+      document.write("<br>Multiply = " + m);
+
+      if (m == original) {
+        document.write("<br>" + original + " is Magic Number");
+      } else {
+        document.write("<br>" + original + " is Not Magic Number");
+      }
+    </script>
+  </body>
+</html>

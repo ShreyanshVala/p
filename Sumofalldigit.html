@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let no = 12; //3 4 6
+      //count no of digits
+      // sum no of digit
+      let sum = 0;
+      while (no > 0) {
+        //346>0 34>0 3>0 0>0
+        let r = no % 10; //346%10=6 34%10=4 3%10=3
+        no = Math.floor(no / 10); // 346/10=34   34/10=3 3/10=0
+        sum += r;
+      }
+      document.write("<br>Sum Of all Digit are :" + sum);
+      //ak ak digit leva mate % 10 and ek ek digit remove karva mate /10
+    </script>
+  </body>
+</html>
